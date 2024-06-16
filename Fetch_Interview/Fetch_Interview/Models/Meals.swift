@@ -9,12 +9,12 @@ import Foundation
 
 struct Meal: Hashable,Codable, Identifiable{
     enum CodingKeys: String, CodingKey{
-        case Meal = "strMeal"
-        case MealThumb = "strMealThumb"
+        case name = "strMeal"
+        case imgUrl = "strMealThumb"
         case id = "idMeal"
     }
-    let Meal: String
-    let MealThumb:String
+    let name: String
+    let imgUrl:String
     let id: String
 }
 

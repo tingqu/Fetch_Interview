@@ -12,12 +12,10 @@ struct Item: View {
     var body: some View {
         NavigationLink(destination: DetailPage()) {
             HStack{
-                fetchImage(by: meal.MealThumb)
+                fetchImage(by: meal.imgUrl)
                 VStack(alignment:.leading,spacing: 5){
-                    Text(meal.Meal)
+                    Text(meal.name)
                         .bold()
-                    Text("Malasiyan")
-                        .font(.caption)
                 }
                 Spacer()
             }
@@ -27,7 +25,7 @@ struct Item: View {
 
 #Preview {
     List{
-        var meal = Meal(Meal: "name", MealThumb: "", id:"1")
+        var meal = Meal(name: "name", imgUrl: "", id:"1")
         Item(meal:meal)
     }
 }

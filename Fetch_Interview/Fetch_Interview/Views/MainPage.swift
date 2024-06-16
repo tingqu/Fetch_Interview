@@ -15,7 +15,7 @@ struct MainPage: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .onAppear{
-            model.fetchMeals()
+            model.fetchMeals() 
         }
         .foregroundColor(.black)
     }

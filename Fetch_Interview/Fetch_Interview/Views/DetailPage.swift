@@ -9,6 +9,7 @@ import SwiftUI
 import TagCloud
 
 struct DetailPage: View {
+    
     var ingredients = ["Eggs", "Oils"]
     var measures = ["200ml","100ml"]
     var tags = ["puddings"]
