@@ -22,6 +22,7 @@
 		0CD72DF12C1D4A2A00B66DC4 /* TagCloud in Frameworks */ = {isa = PBXBuildFile; productRef = 0CD72DF02C1D4A2A00B66DC4 /* TagCloud */; };
 		0CD72DF32C1D4A4B00B66DC4 /* TagCloud in Frameworks */ = {isa = PBXBuildFile; productRef = 0CD72DF22C1D4A4B00B66DC4 /* TagCloud */; };
 		0CD72DFB2C1F5C6300B66DC4 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD72DFA2C1F5C6300B66DC4 /* Meals.swift */; };
+		0CD72DFD2C1F89B500B66DC4 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD72DFC2C1F89B500B66DC4 /* MealDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		0CD72DEB2C1D41EF00B66DC4 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 		0CD72DED2C1D448600B66DC4 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		0CD72DFA2C1F5C6300B66DC4 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		0CD72DFC2C1F89B500B66DC4 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		0CD72DDE2C1D3ABA00B66DC4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0CD72DFC2C1F89B500B66DC4 /* MealDetail.swift */,
 				0CD72DFA2C1F5C6300B66DC4 /* Meals.swift */,
 			);
 			path = Models;
@@ -323,6 +326,7 @@
 				0CD72DEA2C1D417900B66DC4 /* Detail.swift in Sources */,
 				0CD72DEC2C1D41EF00B66DC4 /* DetailPage.swift in Sources */,
 				0CD72DAE2C1D3A1200B66DC4 /* Fetch_InterviewApp.swift in Sources */,
+				0CD72DFD2C1F89B500B66DC4 /* MealDetail.swift in Sources */,
 				0CD72DEE2C1D448600B66DC4 /* Tag.swift in Sources */,
 				0CD72DE82C1D3C1700B66DC4 /* Item.swift in Sources */,
 				0CD72DFB2C1F5C6300B66DC4 /* Meals.swift in Sources */,

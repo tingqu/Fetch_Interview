@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct Item: View {
-    var meals: Meal?
+    var meal: Meal
     var body: some View {
         NavigationLink(destination: DetailPage()) {
             HStack{
-                fetchImage(by: "")
+                fetchImage(by: meal.MealThumb)
                 VStack(alignment:.leading,spacing: 5){
-                    Text("Apam balik")
+                    Text(meal.Meal)
                         .bold()
                     Text("Malasiyan")
                         .font(.caption)
                 }
                 Spacer()
-                
-                
             }
         }
     }
@@ -29,6 +27,7 @@ struct Item: View {
 
 #Preview {
     List{
-        Item()
+        var meal = Meal(Meal: "name", MealThumb: "", id:"1")
+        Item(meal:meal)
     }
 }

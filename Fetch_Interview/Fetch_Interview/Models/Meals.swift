@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Meal: Codable, Identifiable{
+struct Meal: Hashable,Codable, Identifiable{
     enum CodingKeys: String, CodingKey{
         case Meal = "strMeal"
         case MealThumb = "strMealThumb"
@@ -18,6 +18,6 @@ struct Meal: Codable, Identifiable{
     let id: String
 }
 
-struct Meals: Codable {
+struct Meals: Codable{
     var meals: [Meal] = []
 }

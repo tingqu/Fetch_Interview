@@ -2,13 +2,9 @@ import Foundation
 
 class ViewModel: ObservableObject {
     
-    @Published var Meals: Meals?
+    @Published var meals: [Meal] = []
     
-    init(){
-        fetchCourses()
-    }
-    
-    func fetchCourses() {
+    func fetchMeals() {
         guard let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -21,14 +17,19 @@ class ViewModel: ObservableObject {
             guard let data = data else { return }
             
             do {
-                let courses = try JSONDecoder().decode(Fetch_Interview.Meals.self, from: data)
+                let Meals  = try JSONDecoder().decode(Meals.self, from: data)
                 DispatchQueue.main.async {
-                    self.Meals = courses
+                    self.meals = Meals.meals
+                    print("self.meals \(self.meals)")
                 }
             } catch {
                 print(error)
             }
         }.resume()
+    }
+    
+    func fetchMealDetail(){
+        
     }
     
 }
