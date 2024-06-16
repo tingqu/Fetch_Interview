@@ -1,0 +1,15 @@
+{
+  "originHash" : "d6db1f65b9b2061ecb477a7a33f4019931871cd9d705ef4c4ad03def54ab3c3f",
+  "pins" : [
+    {
+      "identity" : "tagcloud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yarspirin/TagCloud.git",
+      "state" : {
+        "revision" : "81c1019541c2748cfecff4eabc05ca0bdcaa3713",
+        "version" : "1.0.4"
+      }
+    }
+  ],
+  "version" : 3
+}
