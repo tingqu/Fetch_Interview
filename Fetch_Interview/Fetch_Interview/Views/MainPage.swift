@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct MainPage: View {
-    @ObservedObject var model = ViewModel()
+    @ObservedObject var model = MealModel()
 
     var body: some View {
         NavigationView{
@@ -15,7 +15,7 @@ struct MainPage: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .onAppear{
-            model.fetchMeals() 
+            model.fetchMeals()
         }
         .foregroundColor(.black)
     }

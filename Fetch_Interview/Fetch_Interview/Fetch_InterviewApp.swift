@@ -17,7 +17,7 @@ struct Fetch_InterviewApp: App {
 }
 
 // global function
-func fetchImage(by url: String ) -> some View{
+func fetchImage(by url: String, _ shouldFrame: Bool) -> some View{
     AsyncImage(url: URL(string: url)) { phase in
         switch phase {
         case .failure:
@@ -26,11 +26,13 @@ func fetchImage(by url: String ) -> some View{
         case .success(let image):
             image
                 .resizable()
+                
             
         default:
             ProgressView()
         }
     }
-    .frame(width:100,height: 100)
+    .frame(width: shouldFrame ? 100 : nil, height: shouldFrame ? 100 : nil)
+    .aspectRatio(contentMode: .fit)
     .padding(.trailing)
 }

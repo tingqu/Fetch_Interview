@@ -1,11 +1,7 @@
 import Foundation
 
-class ViewModel: ObservableObject {
-    
+class MealModel: ObservableObject {
     @Published var meals: [Meal] = []
-    @Published var meal_detail: MealDetail?
-    @Published var meal_id: String?
-    
     func fetchMeals() {
         guard let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") else { return }
         
@@ -28,9 +24,15 @@ class ViewModel: ObservableObject {
             }
         }.resume()
     }
-    
+}
+
+class MealDetailModel: ObservableObject{
+    @Published var meal_detail: MealDetail?
+    @Published var meal_id: String?
+   
     func fetchMealDetail(){
-        guard let url = URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=52893") else { return }
+        let  req_url = "https://themealdb.com/api/json/v1/1/lookup.php?i=\(meal_id ?? "52893")"
+        guard let url = URL(string: req_url) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
@@ -39,7 +41,6 @@ class ViewModel: ObservableObject {
             }
             
             guard let data = data else { return }
-            
             let decoder = JSONDecoder()
                 do {
                     let mealResponse = try decoder.decode(MealResponse.self, from: data)
@@ -49,5 +50,4 @@ class ViewModel: ObservableObject {
                 }
         }.resume()
     }
-    
 }

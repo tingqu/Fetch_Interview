@@ -10,9 +10,9 @@ import SwiftUI
 struct Item: View {
     var meal: Meal
     var body: some View {
-        NavigationLink(destination: DetailPage()) {
+        NavigationLink(destination: DetailPage(id: meal.id)) {
             HStack{
-                fetchImage(by: meal.imgUrl)
+                fetchImage(by: meal.imgUrl, true)
                 VStack(alignment:.leading,spacing: 5){
                     Text(meal.name)
                         .bold()
